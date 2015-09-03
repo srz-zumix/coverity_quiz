@@ -18,7 +18,6 @@ env:
 
 matrix:
   include:
-    - compiler: clang
     - compiler: gcc
       env: COVERITY_SCAN=1
       addons:
