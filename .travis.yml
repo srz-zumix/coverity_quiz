@@ -1,0 +1,21 @@
+language: cpp
+
+compiler:
+  - gcc
+
+before_install:
+  - sudo apt-get -qq update
+
+env:
+  global:
+    # COVERITY_SCAN_TOKEN
+    - secure: "hYUVWu9vAxMJIHqA51WIu6se6YngdlyX0vWpyLmvlAWgpAUp0gap2R0uNfA39KYoSFcax2ZsnZ93en6uRZ0Kk+p2nVxcOMW11385vrb9pWHcauhJRBzjPXEs1LlCMQI/cHqwSpQVlPj6EHNIkvgMWNVnDpiC2J0FxxML+wQ8YTKJ1NmAcWcy9HrxmTeXljdxA1TkOjmQqvnfa2Q0y8QZhWp47OKvgB44axTUkk50dEJTnjBpkl4N8Ztlc3MwJKlySelWKz1Ha9oFqCxr/qtwpCGCeQQew6sqa0pHKu0REYl+owxJS9SH/HWDmBk/DAzELE/Z1a3V0yL4yAfQaPC3BmOgqf0ElN8j7z6YEsx9+yKkX47EmjTOemeyd1wDJyocV4kz6xsCA5cauIRUySTOFI94Zbng8iI10a4abJVJ01eJDpvDah/Nxectn8i5qXL5v6NJLkN6CKjR5Ws871BN9VBgDWzde6pBKn2h67grR/U7pqyWhF38dTrHwF99ts7mXuDGNPwox8qXaPtNSXVAiOrICtRFupVTINvMH+J60uhMa7r2Xva1jx9QCU5GzDU/mAzh0fhHW2neEKgU4ZF7uQAED6K8ePBAfeIp2lzMawe/yI7fV+JPRka+t3A4GxC1tafsRXEtJ+IV/ijXBfjxqEQDUAcmMO2MRHBe19ziKNo="
+      env: COVERITY_SCAN=1
+      addons:
+        coverity_scan:
+          project:
+            name: "srz-zumix/coverity_test"
+            description: "coverity_test"
+          notification_email: zumix.cpp@gmail.com
+          build_command_prepend: "make clean"
+          build_command: make
