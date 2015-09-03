@@ -8,8 +8,8 @@ before_install:
   - sudo apt-get -qq update
 
 script:
-	- make clean
-	- make
+  - make clean
+  - make
 
 env:
   global:
