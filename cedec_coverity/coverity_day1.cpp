@@ -26,18 +26,20 @@ void calc_class_members(base_class* b, int array_size)
 	}
 }
 
+// Calling from external
 int update_class_members(
-	derived_class * class_array,
+	derived_class * class_array,	// Valid array
 	int num_array)
 {
 	if (class_array == NULL)
-		return -1;
+		return -1;		// means error
 
 	calc_class_members(class_array, num_array);
 
-	return 0;
+	return 0;		// success
 }
 
+// -------- impliment ------------
 int do_something1()
 {
 	derived_class a[4];
