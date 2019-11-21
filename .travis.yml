@@ -1,32 +1,25 @@
 language: cpp
-
 compiler:
-  - clang
-  - gcc
-
+- clang
+- gcc
 before_install:
-  - sudo apt-get -qq update
-
+- sudo apt-get -qq update
 script:
-  - make clean
-  - make
-
-env:
-  global:
-    # COVERITY_SCAN_TOKEN
-    - secure: "hYUVWu9vAxMJIHqA51WIu6se6YngdlyX0vWpyLmvlAWgpAUp0gap2R0uNfA39KYoSFcax2ZsnZ93en6uRZ0Kk+p2nVxcOMW11385vrb9pWHcauhJRBzjPXEs1LlCMQI/cHqwSpQVlPj6EHNIkvgMWNVnDpiC2J0FxxML+wQ8YTKJ1NmAcWcy9HrxmTeXljdxA1TkOjmQqvnfa2Q0y8QZhWp47OKvgB44axTUkk50dEJTnjBpkl4N8Ztlc3MwJKlySelWKz1Ha9oFqCxr/qtwpCGCeQQew6sqa0pHKu0REYl+owxJS9SH/HWDmBk/DAzELE/Z1a3V0yL4yAfQaPC3BmOgqf0ElN8j7z6YEsx9+yKkX47EmjTOemeyd1wDJyocV4kz6xsCA5cauIRUySTOFI94Zbng8iI10a4abJVJ01eJDpvDah/Nxectn8i5qXL5v6NJLkN6CKjR5Ws871BN9VBgDWzde6pBKn2h67grR/U7pqyWhF38dTrHwF99ts7mXuDGNPwox8qXaPtNSXVAiOrICtRFupVTINvMH+J60uhMa7r2Xva1jx9QCU5GzDU/mAzh0fhHW2neEKgU4ZF7uQAED6K8ePBAfeIp2lzMawe/yI7fV+JPRka+t3A4GxC1tafsRXEtJ+IV/ijXBfjxqEQDUAcmMO2MRHBe19ziKNo="
-
+- make clean
+- make
 matrix:
   include:
-    - compiler: gcc
-      env: COVERITY_SCAN=1
-      addons:
-        coverity_scan:
-          project:
-            name: "srz-zumix/coverity_test"
-            description: "coverity_test"
-          notification_email: zumix.cpp@gmail.com
-          build_command_prepend: "make clean"
-          build_command: make
-          branch_pattern: master
-
+  - compiler: gcc
+    env: COVERITY_SCAN=1
+    addons:
+      coverity_scan:
+        project:
+          name: srz-zumix/coverity_quiz
+          description: coverity_quiz
+        notification_email: zumix.cpp@gmail.com
+        build_command_prepend: make clean
+        build_command: make
+        branch_pattern: master
+env:
+  global:
+    secure: nzSwrpqjWiKpcb7G4/R3fWGA6t+Ow1ms4QUl8Vc4nKBq/x0EFdsr5kNMZ4FO84CgTfgRMtY9tGavDXxoSXDIbST4kgf7LL54EPFMUfD7m86Db/G9hVsvndbMZvw4vFH4dwX93AwCgYO1pcVSDoDS8VPXvntTLnRYO3CEuNqKF+slNgOklOQtWSl9cexhEP8j+N1TOBotZH3X36UmPKQiWfW7UvSUaxHPUXEgYS0z1myVpx4hgadLgu/7Az8cQAcTiG6+XyrwYuBXtE6mChWI23yWP1Ki1IDS9XBLb6KNWkwC9rvOKtEHPefMlcXREm2DNB5CZ8oTZnSw6e993jhZzUryJoSb1ytoh6ugioF/EgyCMhUkJgOVGB1+LpPM0HhUe9Ks/ylYjYtkHBJKVumwKPk91N8FJWmrzrHhPYNjVBTtlHHSzv7dZv5KQ3v/iDYxkqzd+5AX52B9iqfM4UxHSvXys1lvy/pvMMbT+sgXP4GUxg31QyvtF2/f/rTaSi8wm/+mGPBkieWTeSsDqVSQZ6c9o7RclvrUMaHeYktqIzv0K/9MIjmCMgj6+Xsy+QHI+vyovCq8idCTPRNmFfRYUn9P5YZ8rGYPvC1h58hsZ3rUxRBUffDj0wOlM1Z4RP6bZa/HwZHCREpla3omntk5CnE4bdqxdiCT4ClNYl9rgp4=
