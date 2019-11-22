@@ -1,5 +1,5 @@
 MAKEFLAGS += --no-print-directory
-subdirs := cedec
+subdirs := 2015
 .PHONY: all clean $(subdirs)
 all: $(subdirs)
 clean: $(subdirs)
