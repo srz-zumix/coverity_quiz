@@ -19,7 +19,6 @@ matrix:
         notification_email: zumix.cpp@gmail.com
         build_command_prepend: make clean
         build_command: make
-        branch_pattern: master
 env:
   global:
     secure: nzSwrpqjWiKpcb7G4/R3fWGA6t+Ow1ms4QUl8Vc4nKBq/x0EFdsr5kNMZ4FO84CgTfgRMtY9tGavDXxoSXDIbST4kgf7LL54EPFMUfD7m86Db/G9hVsvndbMZvw4vFH4dwX93AwCgYO1pcVSDoDS8VPXvntTLnRYO3CEuNqKF+slNgOklOQtWSl9cexhEP8j+N1TOBotZH3X36UmPKQiWfW7UvSUaxHPUXEgYS0z1myVpx4hgadLgu/7Az8cQAcTiG6+XyrwYuBXtE6mChWI23yWP1Ki1IDS9XBLb6KNWkwC9rvOKtEHPefMlcXREm2DNB5CZ8oTZnSw6e993jhZzUryJoSb1ytoh6ugioF/EgyCMhUkJgOVGB1+LpPM0HhUe9Ks/ylYjYtkHBJKVumwKPk91N8FJWmrzrHhPYNjVBTtlHHSzv7dZv5KQ3v/iDYxkqzd+5AX52B9iqfM4UxHSvXys1lvy/pvMMbT+sgXP4GUxg31QyvtF2/f/rTaSi8wm/+mGPBkieWTeSsDqVSQZ6c9o7RclvrUMaHeYktqIzv0K/9MIjmCMgj6+Xsy+QHI+vyovCq8idCTPRNmFfRYUn9P5YZ8rGYPvC1h58hsZ3rUxRBUffDj0wOlM1Z4RP6bZa/HwZHCREpla3omntk5CnE4bdqxdiCT4ClNYl9rgp4=
